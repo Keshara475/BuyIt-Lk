@@ -33,6 +33,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      z-index: 1; /* Ensures overlay stays on top */
     }
 
     h1 {
@@ -77,6 +78,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      z-index: 2; /* Ensure bubbles stay on top */
     }
 
     .bubble-btn {
@@ -106,10 +108,11 @@
 
     /* Products Section */
     section#products {
-      padding: 40px 20px;
+      padding: 80px 20px 40px; /* Added padding-top to push products further down */
       background: url('your-feature-background-image.jpg') no-repeat center center fixed;
       background-size: cover;
       text-align: center;
+      z-index: 0; /* Ensures products are properly displayed below the overlay */
     }
 
     section#products h2 {
@@ -123,7 +126,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;  /* Adjusted gap between cards */
+      gap: 20px;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -132,7 +135,7 @@
       background: #f9f9f9;
       border-radius: 15px;
       padding: 20px;
-      width: 220px;  /* Reduced width of the product card */
+      width: 220px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
@@ -159,9 +162,9 @@
     }
 
     .product-card strong {
-      font-size: 2em; /* Slightly smaller font size for price */
+      font-size: 2em;
       font-weight: bold;
-      color: #e74c3c; /* Red color for price */
+      color: #e74c3c;
     }
 
     .product-card a {
@@ -180,6 +183,24 @@
       transform: translateY(-3px);
     }
 
+    /* Contact Section */
+    section#contact {
+      padding: 40px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    section#contact h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    section#contact p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 2.5em;
@@ -191,9 +212,9 @@
       }
 
       .bubbles {
-        top: 50px; /* Move bubbles down */
+        top: 50px;
         right: 10px;
-        gap: 10px; /* Reduce gap between bubbles */
+        gap: 10px;
       }
 
       .bubble-btn {
@@ -202,7 +223,7 @@
       }
 
       .product-card {
-        width: 200px;  /* Even smaller for mobile */
+        width: 200px;
       }
 
       section#products h2 {
@@ -247,7 +268,7 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" style="padding: 40px 20px; background: #f4f4f4; text-align: center;">
+<section id="contact">
   <h2>📞 Contact Us</h2>
   <p>If you have any questions or need assistance, feel free to reach out!</p>
   <p><strong>Phone:</strong> <a href="tel:+94788405736">+94 788 405 736</a></p>
