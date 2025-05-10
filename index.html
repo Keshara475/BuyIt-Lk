@@ -13,15 +13,26 @@
 
     body, html {
       height: 100%;
-      background: url("arrangement-black-friday-shopping-carts-with-copy-space.jpg") no-repeat center center fixed;
-      background-size: cover;
       font-family: 'Segoe UI', sans-serif;
       color: #333;
       scroll-behavior: smooth;
+      position: relative;
+    }
+
+    /* Background image */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url("arrangement-black-friday-shopping-carts-with-copy-space.jpg") no-repeat center center;
+      background-size: cover;
+      z-index: -1;
     }
 
     .overlay {
-      height: 100%;
+      min-height: 100vh;
       width: 100%;
       padding: 40px 20px;
       display: flex;
@@ -84,26 +95,23 @@
     }
 
     footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
       text-align: center;
       color: #777;
       font-size: 14px;
+      margin: 40px 0;
     }
 
     /* Products Section */
     section#products {
       padding: 40px 20px;
-      background: url('your-feature-background-image.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: rgba(255,255,255,0.9);
       text-align: center;
     }
 
     section#products h2 {
       font-size: 2em;
       margin-bottom: 20px;
-      color: white;
+      color: black;
     }
 
     .product-cards {
@@ -138,7 +146,7 @@
     }
 
     .product-card strong {
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: bold;
       color: #e74c3c;
     }
@@ -158,12 +166,6 @@
     }
 
     @media (max-width: 768px) {
-      body, html {
-        background: url("arrangement-black-friday-shopping-carts-with-copy-space.jpg") no-repeat center top;
-        background-size: contain;
-        background-attachment: scroll;
-      }
-
       h1 {
         font-size: 2em;
       }
@@ -188,12 +190,15 @@
       }
 
       .product-card strong {
-        font-size: 1.8em;
+        font-size: 2em;
       }
     }
   </style>
 </head>
 <body>
+
+<!-- Background Image -->
+<div class="background"></div>
 
 <!-- Floating Buttons -->
 <div class="bubbles">
@@ -216,8 +221,7 @@
 <section id="products">
   <h2>🛍️ Featured Products</h2>
   <div class="product-cards">
-    
-    <!-- Product Card 1 -->
+    <!-- Product Card -->
     <div class="product-card">
       <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
       <h3>InPods 13</h3>
@@ -225,9 +229,6 @@
       <strong>Rs. 1550</strong>
       <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
     </div>
-
-    <!-- Add more product cards here -->
-
   </div>
 </section>
 
