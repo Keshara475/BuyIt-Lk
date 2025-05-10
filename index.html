@@ -1,9 +1,13 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Buyit Lk | Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -15,7 +19,7 @@
       height: 100%;
       background: url("pexels-junior-teixeira-1064069-2047905.jpg") no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: #333;
       scroll-behavior: smooth;
     }
@@ -32,31 +36,38 @@
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 4em;
+      margin-bottom: 20px;
       color: white;
+      font-weight: 600;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     }
 
     p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin-bottom: 30px;
+      font-size: 1.5em;
+      max-width: 700px;
+      margin-bottom: 40px;
       opacity: 0.9;
       color: white;
+      line-height: 1.6;
+      font-family: 'Roboto', sans-serif;
     }
 
     .cta-btn {
       background: #25D366;
       color: black;
-      padding: 15px 30px;
-      border-radius: 30px;
+      padding: 18px 36px;
+      border-radius: 50px;
       text-decoration: none;
-      font-size: 18px;
-      transition: 0.3s;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
     .cta-btn:hover {
       background: #1ebd5a;
+      transform: translateY(-4px);
     }
 
     .bubbles {
@@ -71,7 +82,7 @@
     .bubble-btn {
       background: #3498db;
       color: white;
-      padding: 12px 16px;
+      padding: 14px 18px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 500;
@@ -81,6 +92,7 @@
 
     .bubble-btn:hover {
       background: #2980b9;
+      transform: translateY(-4px);
     }
 
     footer {
@@ -101,26 +113,33 @@
     }
 
     section#products h2 {
-      font-size: 2em;
+      font-size: 2.5em;
       margin-bottom: 20px;
       color: white;
+      font-weight: 600;
     }
 
     .product-cards {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      max-width: 1000px;
+      gap: 25px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .product-card {
       background: #f9f9f9;
       border-radius: 15px;
-      padding: 20px;
-      width: 250px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 270px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
 
     .product-card img {
@@ -129,42 +148,46 @@
     }
 
     .product-card h3 {
-      margin-top: 10px;
+      margin-top: 15px;
       color: black;
+      font-weight: 500;
     }
 
     .product-card p {
-      color: black;
+      color: #555;
+      font-size: 1.1em;
     }
 
     .product-card strong {
-      font-size: 2em; /* Increase the font size */
-      font-weight: bold; /* Make it bold */
-      color: #e74c3c; /* Make the price more attractive with a red color */
+      font-size: 2.2em; /* Increase the font size */
+      font-weight: bold;
+      color: #e74c3c; /* Red color for price */
     }
 
     .product-card a {
       text-decoration: none;
       background: #25D366;
       color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
+      padding: 12px 24px;
+      border-radius: 50px;
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
     }
 
     .product-card a:hover {
       background: #1ebd5a;
+      transform: translateY(-3px);
     }
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 2em;
+        font-size: 2.5em;
       }
 
       .cta-btn {
-        padding: 12px 20px;
-        font-size: 16px;
+        padding: 14px 28px;
+        font-size: 18px;
       }
 
       .bubbles {
@@ -173,12 +196,16 @@
       }
 
       .bubble-btn {
-        padding: 10px 14px;
-        font-size: 14px;
+        padding: 12px 16px;
+        font-size: 15px;
       }
 
       .product-card {
         width: 220px;
+      }
+
+      section#products h2 {
+        font-size: 2em;
       }
     }
   </style>
