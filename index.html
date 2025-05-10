@@ -24,16 +24,21 @@
       scroll-behavior: smooth;
     }
 
+    section {
+      margin: 0;
+      padding: 0;
+    }
+
     .overlay {
       height: 100vh;
       width: 100%;
-      padding: 40px 20px;
+      padding: 60px 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: rgba(0, 0, 0, 0.4); /* Transparency effect */
+      background: rgba(0, 0, 0, 0.4);
       z-index: 1;
       position: relative;
     }
@@ -136,10 +141,11 @@
 
     section#products {
       position: relative;
-      padding: 80px 20px 40px;
       min-height: 100vh;
       text-align: center;
       z-index: 0;
+      margin-bottom: 0; /* Ensure no extra margin below */
+      padding-top: 0; /* Fix any extra padding */
     }
 
     section#products::before {
@@ -156,13 +162,14 @@
 
     .products-overlay {
       position: relative;
-      background-color: rgba(0, 0, 0, 0.6); /* Increased transparency effect */
+      background-color: rgba(0, 0, 0, 0.4);
       padding: 60px 20px;
       border-radius: 15px;
       max-width: 1100px;
       margin: 0 auto;
       z-index: 1;
       color: white;
+      margin-bottom: 0; /* Remove margin-bottom */
     }
 
     section#products h2 {
@@ -240,9 +247,9 @@
       padding: 60px 20px;
       text-align: center;
       min-height: 100vh;
-      margin-top: 80px;
       z-index: 0;
-      background: transparent; /* No transparency effect for contact section */
+      margin-top: 0; /* Ensure no margin-top */
+      padding-top: 0; /* Remove any extra padding */
     }
 
     section#contact::before {
@@ -264,7 +271,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.4); /* Transparency effect only for background */
+      background-color: rgba(0, 0, 0, 0.4);
       z-index: -1;
     }
 
