@@ -24,6 +24,11 @@
       scroll-behavior: smooth;
     }
 
+    section {
+      margin: 0;
+      padding: 0;
+    }
+
     .overlay {
       height: 100vh;
       width: 100%;
@@ -139,6 +144,8 @@
       min-height: 100vh;
       text-align: center;
       z-index: 0;
+      margin-bottom: 0;
+      padding-top: 0;
     }
 
     section#products::before {
@@ -148,7 +155,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.4); /* Transparent overlay only */
       z-index: -2;
     }
 
@@ -180,16 +187,10 @@
       background: #f9f9f9;
       border-radius: 15px;
       padding: 20px;
-      width: 300px;  /* Increased width */
-      height: 400px;  /* Increased height */
+      width: 220px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
       transition: 0.3s;
       color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      text-align: center;
     }
 
     .product-card:hover {
@@ -199,26 +200,21 @@
 
     .product-card img {
       width: 100%;
-      height: 120px;  /* Adjusted height for bigger images */
-      object-fit: cover;
       border-radius: 10px;
     }
 
     .product-card h3 {
-      margin-top: 10px;  /* Increased space between image and text */
+      margin-top: 15px;
       font-weight: 500;
-      font-size: 1.2em;  /* Increased font size */
     }
 
     .product-card p {
       color: #555;
-      font-size: 1em;  /* Increased font size */
-      margin: 10px 0;
-      line-height: 1.4em;
+      font-size: 1.1em;
     }
 
     .product-card strong {
-      font-size: 1.5em;  /* Larger price */
+      font-size: 2em;
       font-weight: bold;
       color: #e74c3c;
     }
@@ -227,10 +223,10 @@
       text-decoration: none;
       background: #25D366;
       color: white;
-      padding: 8px 20px;  /* Increased padding */
+      padding: 12px 24px;
       border-radius: 50px;
-      font-size: 1em;  /* Increased font size */
-      margin-top: 10px;  /* Increased margin */
+      display: inline-block;
+      margin-top: 20px;
       transition: all 0.3s ease;
     }
 
@@ -249,6 +245,8 @@
       text-align: center;
       min-height: 100vh;
       z-index: 0;
+      margin-top: 0;
+      padding-top: 0;
     }
 
     section#contact::before {
@@ -305,8 +303,7 @@
       }
 
       .product-card {
-        width: 220px;  /* Adjusted width for responsiveness */
-        height: 300px;  /* Adjusted height for responsiveness */
+        width: 200px;
       }
 
       section#products h2 {
@@ -337,9 +334,9 @@
       <div class="product-card">
         <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
         <h3>InPods 13</h3>
-        <p>Bluetooth 5.0, Compact, Stylish</p>
+        <p>High-quality audio, compact design, Bluetooth 5.0</p>
         <strong>Rs. 1550</strong>
-        <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order</a>
+        <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
       </div>
     </div>
   </div>
