@@ -136,21 +136,39 @@
 
     /* Products Section */
     section#products {
-      padding: 80px 20px 40px;
       position: relative;
-      background: rgba(0, 0, 0, 0.4); /* Match with overlay */
-      color: white;
+      padding: 80px 20px 40px;
+      min-height: 100vh;
+      text-align: center;
+      z-index: 0;
+    }
+
+    section#products::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url("pexels-junior-teixeira-1064069-2047905.jpg") no-repeat center center fixed;
+      background-size: cover;
+      z-index: -2;
     }
 
     .products-overlay {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 60px 20px;
+      border-radius: 15px;
       max-width: 1100px;
       margin: 0 auto;
+      z-index: 1;
+      color: white;
     }
 
     section#products h2 {
       font-size: 2.5em;
       margin-bottom: 20px;
-      color: white;
       font-weight: 600;
     }
 
@@ -214,18 +232,41 @@
       transform: translateY(-3px);
     }
 
+    /* Contact Section */
     section#contact {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 60px 20px;
+      text-align: center;
+      min-height: 100vh;
+      margin-top: 80px;
+      z-index: 0;
+    }
+
+    section#contact::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
       background: url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg") no-repeat center center fixed;
       background-size: cover;
-      text-align: center;
-      margin-top: 80px;
-      min-height: 100vh;
+      z-index: -2;
+    }
+
+    section#contact::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
       background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
     }
 
     section#contact h2 {
