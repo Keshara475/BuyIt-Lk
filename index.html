@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -13,11 +13,12 @@
 
     body, html {
       height: 100%;
-      background: url("stanislav-P-_hZkfU9D8-unsplash.jpg") no-repeat center center fixed;
+      background: url("arrangement-black-friday-shopping-carts-with-copy-space.jpg") no-repeat center center;
       background-size: cover;
       font-family: 'Segoe UI', sans-serif;
       color: #333;
       scroll-behavior: smooth;
+      background-attachment: fixed;
     }
 
     .overlay {
@@ -180,6 +181,11 @@
       .product-card {
         width: 220px;
       }
+
+      /* For mobile devices, disable fixed background */
+      body, html {
+        background-attachment: scroll;
+      }
     }
   </style>
 </head>
@@ -227,3 +233,4 @@
 
 </body>
 </html>
+
