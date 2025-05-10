@@ -25,7 +25,7 @@
     }
 
     .overlay {
-      height: 100%;
+      height: 100vh;
       width: 100%;
       padding: 40px 20px;
       display: flex;
@@ -33,20 +33,19 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      background: rgba(0, 0, 0, 0.4);
       z-index: 1;
       position: relative;
-      background: rgba(0, 0, 0, 0.4);
     }
 
     h1 {
       font-size: 4em;
       margin-bottom: 20px;
-      color: white;
       font-weight: 600;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
       background: -webkit-linear-gradient(45deg, #ff6347, #ff1493);
       -webkit-background-clip: text;
       color: transparent;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     }
 
     p {
@@ -66,9 +65,9 @@
       border-radius: 50px;
       text-decoration: none;
       font-size: 20px;
-      transition: all 0.3s ease;
       font-weight: 500;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
     }
 
     .cta-btn:hover {
@@ -93,7 +92,6 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: 500;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: 0.3s;
     }
 
@@ -132,24 +130,19 @@
       bottom: 10px;
       width: 100%;
       text-align: center;
-      color: #777;
+      color: #ccc;
       font-size: 14px;
     }
 
     /* Products Section */
     section#products {
       padding: 80px 20px 40px;
-      background: url('your-feature-background-image.jpg') no-repeat center center fixed;
-      background-size: cover;
-      text-align: center;
-      z-index: 0;
-      min-height: 100vh;
+      position: relative;
+      background: rgba(0, 0, 0, 0.4); /* Match with overlay */
+      color: white;
     }
 
     .products-overlay {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 60px 20px;
-      border-radius: 15px;
       max-width: 1100px;
       margin: 0 auto;
     }
@@ -176,6 +169,7 @@
       width: 220px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
       transition: 0.3s;
+      color: black;
     }
 
     .product-card:hover {
@@ -190,7 +184,6 @@
 
     .product-card h3 {
       margin-top: 15px;
-      color: black;
       font-weight: 500;
     }
 
@@ -265,23 +258,6 @@
         font-size: 18px;
       }
 
-      .bubbles {
-        top: 10px;
-        right: 10px;
-        gap: 10px;
-      }
-
-      .bubble-btn {
-        padding: 10px 14px;
-        font-size: 14px;
-      }
-
-      .contact-bubble {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-      }
-
       .product-card {
         width: 200px;
       }
@@ -299,11 +275,8 @@
   <div class="bubbles">
     <a href="#search" class="bubble-btn">🔍 Search</a>
   </div>
-
-  <!-- Contact Us Bubble -->
   <a href="#contact" class="contact-bubble">📞</a>
 
-  <!-- Main Content -->
   <h1>Buyit Lk</h1>
   <p>Discover the best deals on trendy gadgets & accessories. Fast delivery and cash on delivery across Sri Lanka 🇱🇰</p>
   <a href="#products" class="cta-btn">🛍️ Explore Products</a>
@@ -314,7 +287,6 @@
   <div class="products-overlay">
     <h2>🛍️ Featured Products</h2>
     <div class="product-cards">
-      <!-- Product Card 1 -->
       <div class="product-card">
         <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
         <h3>InPods 13</h3>
@@ -322,7 +294,6 @@
         <strong>Rs. 1550</strong>
         <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
       </div>
-      <!-- Add more product cards as needed -->
     </div>
   </div>
 </section>
