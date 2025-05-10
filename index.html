@@ -186,8 +186,11 @@
       margin-top: 40px;
     }
 
+    /* ✅ UPDATED: Blur-enabled product card */
     .product-card {
-      background: #f9f9f9;
+      background: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+      backdrop-filter: blur(10px); /* blur effect */
+      -webkit-backdrop-filter: blur(10px); /* Safari support */
       border-radius: 15px;
       padding: 20px;
       width: 220px;
@@ -212,7 +215,7 @@
     }
 
     .product-card p {
-      color: #555;
+      color: #000; /* Black for contrast */
       font-size: 1.1em;
     }
 
