@@ -91,18 +91,23 @@
     }
 
     .bubble-btn {
-      background: transparent;
+      background: rgba(255, 255, 255, 0.15);
       color: white;
       padding: 14px 18px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
 
     .bubble-btn:hover {
-      background: rgba(52, 152, 219, 0.7);
-      transform: translateY(-4px);
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
     }
 
     .contact-bubble {
@@ -187,21 +192,18 @@
     }
 
     .product-card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       padding: 20px;
       width: 220px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      transition: 0.3s;
       color: white;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      transition: 0.3s;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
     .product-card img {
@@ -319,7 +321,6 @@
   </style>
 </head>
 <body>
-
 <!-- Floating Buttons -->
 <div class="overlay">
   <div class="bubbles">
@@ -329,13 +330,13 @@
 
   <h1>Buyit Lk</h1>
   <p>Discover the best deals on trendy gadgets & accessories. Fast delivery and cash on delivery across Sri Lanka 🇱🇰</p>
-  <a href="#products" class="cta-btn">🛍️ Explore Products</a>
+  <a href="#products" class="cta-btn">🛙️ Explore Products</a>
 </div>
 
 <!-- Products Section -->
 <section id="products">
   <div class="products-overlay">
-    <h2>🛍️ Featured Products</h2>
+    <h2>🛙️ Featured Products</h2>
     <div class="product-cards">
       <div class="product-card">
         <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
@@ -360,6 +361,5 @@
 <footer>
   &copy; 2025 Buyit Lk. Designed with Keshara Hishad in Sri Lanka.
 </footer>
-
 </body>
 </html>
