@@ -34,7 +34,7 @@
     h1 {
       font-size: 3em;
       margin-bottom: 10px;
-      color: white; /* Change text color to white */
+      color: white;
     }
 
     p {
@@ -42,12 +42,12 @@
       max-width: 600px;
       margin-bottom: 30px;
       opacity: 0.9;
-      color: white; /* Change text color to white */
+      color: white;
     }
 
     .cta-btn {
       background: #25D366;
-      color: black; /* Change text color to black */
+      color: black;
       padding: 15px 30px;
       border-radius: 30px;
       text-decoration: none;
@@ -95,7 +95,7 @@
     /* Products Section */
     section#products {
       padding: 40px 20px;
-      background: url('your-feature-background-image.jpg') no-repeat center center fixed; /* Background image for products section */
+      background: url('your-feature-background-image.jpg') no-repeat center center fixed;
       background-size: cover;
       text-align: center;
     }
@@ -103,7 +103,7 @@
     section#products h2 {
       font-size: 2em;
       margin-bottom: 20px;
-      color: white; /* White text for the section header */
+      color: white;
     }
 
     .product-cards {
@@ -130,15 +130,17 @@
 
     .product-card h3 {
       margin-top: 10px;
-      color: black; /* Black text for the product name */
+      color: black;
     }
 
     .product-card p {
-      color: black; /* Black text for product description */
+      color: black;
     }
 
     .product-card strong {
-      color: #25D366;
+      font-size: 2em;
+      font-weight: bold;
+      color: #e74c3c;
     }
 
     .product-card a {
@@ -156,6 +158,12 @@
     }
 
     @media (max-width: 768px) {
+      body, html {
+        background: url("arrangement-black-friday-shopping-carts-with-copy-space.jpg") no-repeat center top;
+        background-size: contain;
+        background-attachment: scroll;
+      }
+
       h1 {
         font-size: 2em;
       }
@@ -178,6 +186,10 @@
       .product-card {
         width: 220px;
       }
+
+      .product-card strong {
+        font-size: 1.8em;
+      }
     }
   </style>
 </head>
@@ -186,8 +198,8 @@
 <!-- Floating Buttons -->
 <div class="bubbles">
   <a href="#contact" class="bubble-btn">📞 Contact</a>
-  <a href="#products" class="bubble-btn">🛍️ Products</a> <!-- Updated to link to products section -->
-  <a href="https://wa.me/94788405736" target="_blank" class="bubble-btn">💬 WhatsApp</a> <!-- Changed to WhatsApp link -->
+  <a href="#products" class="bubble-btn">🛍️ Products</a>
+  <a href="https://wa.me/94788405736" target="_blank" class="bubble-btn">💬 WhatsApp</a>
   <a href="https://www.tiktok.com/@yourtiktokusername" target="_blank" class="bubble-btn">🎵 TikTok</a>
   <a href="https://www.facebook.com/yourfacebookpage" target="_blank" class="bubble-btn">📘 Facebook</a>
   <a href="#search" class="bubble-btn">🔍 Search</a>
@@ -197,8 +209,7 @@
 <div class="overlay">
   <h1>Buyit Lk</h1>
   <p>Discover the best deals on trendy gadgets & accessories. Fast delivery and cash on delivery across Sri Lanka 🇱🇰</p>
-  <!-- Replaced the Chat with Us WhatsApp button with "Products" button -->
-  <a href="#products" class="cta-btn">🛍️ Explore Products</a> <!-- Text color set to black -->
+  <a href="#products" class="cta-btn">🛍️ Explore Products</a>
 </div>
 
 <!-- Products Section -->
@@ -215,7 +226,7 @@
       <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
     </div>
 
-    <!-- Add more product cards similarly -->
+    <!-- Add more product cards here -->
 
   </div>
 </section>
