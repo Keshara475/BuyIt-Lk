@@ -97,7 +97,6 @@
       transform: translateY(-4px);
     }
 
-    /* New Contact Bubble */
     .contact-bubble {
       background: #e74c3c;
       color: white;
@@ -130,7 +129,7 @@
       background-size: cover;
       text-align: center;
       z-index: 0;
-      min-height: 100vh; /* Ensures products section takes up full height */
+      min-height: 100vh;
     }
 
     section#products h2 {
@@ -208,11 +207,12 @@
       justify-content: center;
       align-items: center;
       padding: 60px 20px;
-      background: linear-gradient(135deg, rgba(52, 152, 219, 0.7), rgba(46, 204, 113, 0.7)), url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg") no-repeat center center fixed;
+      background: url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg") no-repeat center center fixed;
       background-size: cover;
       text-align: center;
-      margin-top: 80px; /* Ensures there's space above the Contact section */
+      margin-top: 80px;
       min-height: 100vh;
+      color: white;
     }
 
     section#contact h2 {
@@ -223,7 +223,7 @@
 
     section#contact p {
       font-size: 1.2em;
-      color: #fff;
+      margin: 10px 0;
     }
 
     section#contact a {
@@ -233,6 +233,12 @@
 
     section#contact a:hover {
       color: #1abc9c;
+    }
+
+    .contact-img {
+      width: 220px;
+      border-radius: 15px;
+      margin: 20px 0;
     }
 
     @media (max-width: 768px) {
@@ -273,7 +279,6 @@
   <a href="#products" class="bubble-btn">🛍️ Products</a>
   <a href="https://wa.me/94788405736" target="_blank" class="bubble-btn">💬 WhatsApp</a>
   <a href="#search" class="bubble-btn">🔍 Search</a>
-  <!-- Contact Us Bubble -->
   <a href="#contact" class="contact-bubble">📞 Contact Us</a>
 </div>
 
@@ -288,8 +293,7 @@
 <section id="products">
   <h2>🛍️ Featured Products</h2>
   <div class="product-cards">
-    
-    <!-- Product Card 1 -->
+    <!-- Product Card -->
     <div class="product-card">
       <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
       <h3>InPods 13</h3>
@@ -297,15 +301,14 @@
       <strong>Rs. 1550</strong>
       <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
     </div>
-
-    <!-- Add more product cards similarly -->
-
+    <!-- Add more products as needed -->
   </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
   <h2>📞 Contact Us</h2>
+  <img src="your-contact-image.jpg" alt="Contact Image" class="contact-img" />
   <p>If you have any questions or need assistance, feel free to reach out!</p>
   <p><strong>Phone:</strong> <a href="tel:+94788405736">+94 788 405 736</a></p>
   <p><strong>Email:</strong> <a href="mailto:info@buyitlk.com">info@buyitlk.com</a></p>
