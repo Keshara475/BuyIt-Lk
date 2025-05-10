@@ -34,6 +34,7 @@
       align-items: center;
       text-align: center;
       z-index: 1;
+      position: relative; /* To fix bubbles within the first section */
     }
 
     h1 {
@@ -72,8 +73,8 @@
     }
 
     .bubbles {
-      position: fixed;
-      top: 20px;
+      position: absolute;
+      top: 50%; /* To center the bubbles vertically */
       right: 20px;
       display: flex;
       flex-direction: column;
@@ -98,13 +99,22 @@
     }
 
     .contact-bubble {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
       background: #e74c3c;
       color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      font-weight: 500;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 3;
       transition: 0.3s;
     }
 
@@ -122,7 +132,6 @@
       font-size: 14px;
     }
 
-    /* Products Section */
     section#products {
       padding: 80px 20px 40px;
       background: url('your-feature-background-image.jpg') no-repeat center center fixed;
@@ -200,19 +209,17 @@
       transform: translateY(-3px);
     }
 
-    /* Contact Section */
     section#contact {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 60px 20px;
-      background: url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg") no-repeat center center fixed;
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.7), rgba(46, 204, 113, 0.7)), url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg") no-repeat center center fixed;
       background-size: cover;
       text-align: center;
       margin-top: 80px;
       min-height: 100vh;
-      color: white;
     }
 
     section#contact h2 {
@@ -223,7 +230,7 @@
 
     section#contact p {
       font-size: 1.2em;
-      margin: 10px 0;
+      color: #fff;
     }
 
     section#contact a {
@@ -233,12 +240,6 @@
 
     section#contact a:hover {
       color: #1abc9c;
-    }
-
-    .contact-img {
-      width: 220px;
-      border-radius: 15px;
-      margin: 20px 0;
     }
 
     @media (max-width: 768px) {
@@ -252,14 +253,20 @@
       }
 
       .bubbles {
-        top: 50px;
+        top: 50%;
         right: 10px;
         gap: 10px;
       }
 
       .bubble-btn {
-        padding: 12px 16px;
-        font-size: 15px;
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      .contact-bubble {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
       }
 
       .product-card {
@@ -275,15 +282,17 @@
 <body>
 
 <!-- Floating Buttons -->
-<div class="bubbles">
-  <a href="#products" class="bubble-btn">🛍️ Products</a>
-  <a href="https://wa.me/94788405736" target="_blank" class="bubble-btn">💬 WhatsApp</a>
-  <a href="#search" class="bubble-btn">🔍 Search</a>
-  <a href="#contact" class="contact-bubble">📞 Contact Us</a>
-</div>
-
-<!-- Main Content -->
 <div class="overlay">
+  <div class="bubbles">
+    <a href="#products" class="bubble-btn">🛍️ Products</a>
+    <a href="https://wa.me/94788405736" target="_blank" class="bubble-btn">💬 WhatsApp</a>
+    <a href="#search" class="bubble-btn">🔍 Search</a>
+  </div>
+
+  <!-- Contact Us Bubble -->
+  <a href="#contact" class="contact-bubble">📞</a>
+
+  <!-- Main Content -->
   <h1>Buyit Lk</h1>
   <p>Discover the best deals on trendy gadgets & accessories. Fast delivery and cash on delivery across Sri Lanka 🇱🇰</p>
   <a href="#products" class="cta-btn">🛍️ Explore Products</a>
@@ -293,7 +302,7 @@
 <section id="products">
   <h2>🛍️ Featured Products</h2>
   <div class="product-cards">
-    <!-- Product Card -->
+    <!-- Product Card 1 -->
     <div class="product-card">
       <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
       <h3>InPods 13</h3>
@@ -301,14 +310,13 @@
       <strong>Rs. 1550</strong>
       <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
     </div>
-    <!-- Add more products as needed -->
+    <!-- Add more product cards similarly -->
   </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
   <h2>📞 Contact Us</h2>
-  <img src="your-contact-image.jpg" alt="Contact Image" class="contact-img" />
   <p>If you have any questions or need assistance, feel free to reach out!</p>
   <p><strong>Phone:</strong> <a href="tel:+94788405736">+94 788 405 736</a></p>
   <p><strong>Email:</strong> <a href="mailto:info@buyitlk.com">info@buyitlk.com</a></p>
