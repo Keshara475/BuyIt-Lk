@@ -97,6 +97,23 @@
       transform: translateY(-4px);
     }
 
+    /* New Contact Bubble */
+    .contact-bubble {
+      background: #e74c3c;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .contact-bubble:hover {
+      background: #c0392b;
+      transform: translateY(-4px);
+    }
+
     footer {
       position: absolute;
       bottom: 10px;
@@ -186,21 +203,36 @@
 
     /* Contact Section */
     section#contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 60px 20px;
-      background: #f4f4f4;
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.7), rgba(46, 204, 113, 0.7)), url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg") no-repeat center center fixed;
+      background-size: cover;
       text-align: center;
       margin-top: 80px; /* Ensures there's space above the Contact section */
+      min-height: 100vh;
     }
 
     section#contact h2 {
       font-size: 2.5em;
       margin-bottom: 20px;
-      color: #333;
+      color: white;
     }
 
     section#contact p {
       font-size: 1.2em;
-      color: #555;
+      color: #fff;
+    }
+
+    section#contact a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section#contact a:hover {
+      color: #1abc9c;
     }
 
     @media (max-width: 768px) {
@@ -241,6 +273,8 @@
   <a href="#products" class="bubble-btn">🛍️ Products</a>
   <a href="https://wa.me/94788405736" target="_blank" class="bubble-btn">💬 WhatsApp</a>
   <a href="#search" class="bubble-btn">🔍 Search</a>
+  <!-- Contact Us Bubble -->
+  <a href="#contact" class="contact-bubble">📞 Contact Us</a>
 </div>
 
 <!-- Main Content -->
