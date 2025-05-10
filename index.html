@@ -64,7 +64,7 @@
     }
 
     .cta-btn {
-      background-color: #3498db; /* Changed to blue */
+      background: linear-gradient(45deg, #ff6347, #ff1493);
       color: white;
       padding: 18px 36px;
       border-radius: 50px;
@@ -76,7 +76,7 @@
     }
 
     .cta-btn:hover {
-      background-color: #2980b9; /* Darker blue on hover */
+      background: linear-gradient(45deg, #ff8265, #ff3bb5);
       transform: translateY(-4px);
     }
 
@@ -91,19 +91,17 @@
     }
 
     .bubble-btn {
-      background-color: #3498db; /* Changed to blue */
+      background: transparent;
       color: white;
-      padding: 18px 36px;
+      padding: 14px 18px;
       border-radius: 50px;
       text-decoration: none;
-      font-size: 18px;
       font-weight: 500;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
     .bubble-btn:hover {
-      background-color: #2980b9; /* Darker blue on hover */
+      background: rgba(52, 152, 219, 0.7);
       transform: translateY(-4px);
     }
 
@@ -111,7 +109,7 @@
       position: absolute;
       bottom: 20px;
       right: 20px;
-      background-color: #3498db; /* Changed to blue */
+      background: #3498db;
       color: white;
       width: 60px;
       height: 60px;
@@ -128,7 +126,7 @@
     }
 
     .contact-bubble:hover {
-      background-color: #2980b9; /* Darker blue on hover */
+      background: #2980b9;
       transform: translateY(-4px);
     }
 
@@ -221,26 +219,21 @@
       color: #e74c3c;
     }
 
-    /* Updated color for buttons only */
-    .product-card a,
-    .bubble-btn,
-    .cta-btn {
-      background-color: #3498db; /* Changed to blue */
-      color: white;
-      padding: 18px 36px;
-      border-radius: 50px;
+    /* Updated Order Now button styles */
+    .product-card a {
       text-decoration: none;
-      font-size: 20px;
-      font-weight: 500;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      background: #27ae60; /* Green color */
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-top: 20px;
       transition: all 0.3s ease;
     }
 
-    .product-card a:hover,
-    .bubble-btn:hover,
-    .cta-btn:hover {
-      background-color: #2980b9; /* Darker blue on hover */
-      transform: translateY(-4px);
+    .product-card a:hover {
+      background: #2ecc71; /* Lighter green for hover */
+      transform: translateY(-3px);
     }
 
     section#contact {
