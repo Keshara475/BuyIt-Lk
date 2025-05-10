@@ -24,11 +24,6 @@
       scroll-behavior: smooth;
     }
 
-    section {
-      margin: 0;
-      padding: 0;
-    }
-
     .overlay {
       height: 100vh;
       width: 100%;
@@ -91,17 +86,18 @@
     }
 
     .bubble-btn {
-      background: transparent;
+      background: #ff6347;
       color: white;
-      padding: 14px 18px;
+      padding: 12px 16px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 500;
       transition: 0.3s;
+      font-size: 15px;
     }
 
     .bubble-btn:hover {
-      background: rgba(52, 152, 219, 0.7);
+      background: #ff1493;
       transform: translateY(-4px);
     }
 
@@ -109,7 +105,7 @@
       position: absolute;
       bottom: 20px;
       right: 20px;
-      background: #3498db;
+      background: #ff6347;
       color: white;
       width: 60px;
       height: 60px;
@@ -126,7 +122,7 @@
     }
 
     .contact-bubble:hover {
-      background: #2980b9;
+      background: #ff1493;
       transform: translateY(-4px);
     }
 
@@ -144,8 +140,6 @@
       min-height: 100vh;
       text-align: center;
       z-index: 0;
-      margin-bottom: 0;
-      padding-top: 0;
     }
 
     section#products::before {
@@ -155,7 +149,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.4); /* Transparent overlay only */
+      background-color: rgba(0, 0, 0, 0.4);
       z-index: -2;
     }
 
@@ -219,20 +213,20 @@
       color: #e74c3c;
     }
 
-    /* Updated Order Now button styles */
     .product-card a {
       text-decoration: none;
-      background: #27ae60; /* Green color */
+      background: linear-gradient(45deg, #ff6347, #ff1493);
       color: white;
       padding: 12px 24px;
       border-radius: 50px;
       display: inline-block;
       margin-top: 20px;
       transition: all 0.3s ease;
+      font-size: 16px;
     }
 
     .product-card a:hover {
-      background: #2ecc71; /* Lighter green for hover */
+      background: linear-gradient(45deg, #ff8265, #ff3bb5);
       transform: translateY(-3px);
     }
 
@@ -246,8 +240,6 @@
       text-align: center;
       min-height: 100vh;
       z-index: 0;
-      margin-top: 0;
-      padding-top: 0;
     }
 
     section#contact::before {
@@ -348,7 +340,7 @@
   <h2>📞 Contact Us</h2>
   <p>If you have any questions or need assistance, feel free to reach out!</p>
   <p><strong>Phone:</strong> <a href="tel:+94788405736">+94 788 405 736</a></p>
-  <p><strong>Email:</strong> <a href="mailto:kesharakeshara585@gmail.com">info@buyitlk.com</a></p>
+  <p><strong>Email:</strong> <a href="mailto:info@buyitlk.com">info@buyitlk.com</a></p>
   <p><strong>WhatsApp:</strong> <a href="https://wa.me/94788405736" target="_blank">Chat with us</a></p>
 </section>
 
