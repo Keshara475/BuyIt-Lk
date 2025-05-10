@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buyit Lk | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      background: url('file:///E:/Business/arrangement-black-friday-shopping-carts-with-copy-space.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.7); /* Transparent white overlay for readability */
+      height: 100%;
+      width: 100%;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      background: #25D366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #1ebd5a;
+    }
+
+    .bubbles {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .bubble-btn {
+      background: #3498db;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .bubble-btn:hover {
+      background: #2980b9;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* Products Section */
+    section#products {
+      padding: 40px 20px;
+      background: url('file:///E:/Business/your-feature-background-image.jpg') no-repeat center center fixed; /* Background image for products section */
+      background-size: cover;
+      text-align: center;
+    }
+
+    section#products h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: white; /* White text for the section header */
+    }
+
+    .product-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin-top: 10px;
+      color: black; /* Black text for the product name */
+    }
+
+    .product-card p {
+      color: black; /* Black text for product description */
+    }
+
+    .product-card strong {
+      color: #25D366;
+    }
+
+    .product-card a {
+      text-decoration: none;
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .product-card a:hover {
+      background: #1ebd5a;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .cta-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+      }
+
+      .bubbles {
+        top: 10px;
+        right: 10px;
+      }
+
+      .bubble-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      .product-card {
+        width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating Buttons -->
+<div class="bubbles">
+  <a href="#contact" class="bubble-btn">📞 Contact</a>
+  <a href="#products" class="bubble-btn">🛍️ Products</a>
+  <a class="bubble-btn" style="cursor: default;">📱 Social Media</a>
+  <a href="https://www.tiktok.com/@yourtiktokusername" target="_blank" class="bubble-btn">🎵 TikTok</a>
+  <a href="https://www.facebook.com/yourfacebookpage" target="_blank" class="bubble-btn">📘 Facebook</a>
+  <a href="#search" class="bubble-btn">🔍 Search</a>
+</div>
+
+<!-- Main Content -->
+<div class="overlay">
+  <h1>Buyit Lk</h1>
+  <p>Discover the best deals on trendy gadgets & accessories. Fast delivery and cash on delivery across Sri Lanka 🇱🇰</p>
+  <a href="https://wa.me/94771234567?text=Hi!%20I'm%20interested%20in%20shopping%20with%20Buyit%20Lk" class="cta-btn">📲 Chat with Us on WhatsApp</a>
+</div>
+
+<!-- Products Section -->
+<section id="products">
+  <h2>🛍️ Featured Products</h2>
+  <div class="product-cards">
+    
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <img src="E:\Business\51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
+      <h3>InPods 13</h3>
+      <p>Wireless, Bass Boosted, Stylish</p>
+      <strong>Rs. 1550</strong>
+      <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
+    </div>
+
+    <!-- Add more product cards similarly -->
+
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Buyit Lk. Designed with ❤️ in Sri Lanka.
+</footer>
+
+</body>
+</html>
