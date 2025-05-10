@@ -15,41 +15,42 @@
       box-sizing: border-box;
     }
 
-    body, html {
-      height: 100%;
-      background: url("pexels-junior-teixeira-1064069-2047905.jpg") no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
+    html {
       scroll-behavior: smooth;
     }
 
-    section {
-      margin: 0;
-      padding: 0;
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background: url("pexels-junior-teixeira-1064069-2047905.jpg") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    header, section, footer {
+      width: 100%;
     }
 
     .overlay {
       height: 100vh;
-      width: 100%;
       padding: 60px 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.4);
       position: relative;
+      z-index: 1;
     }
 
     h1 {
       font-size: 4em;
       margin-bottom: 20px;
       font-weight: 600;
-      background: -webkit-linear-gradient(45deg, #ff6347, #ff1493);
+      background: linear-gradient(45deg, #ff6347, #ff1493);
       -webkit-background-clip: text;
-      color: transparent;
+      -webkit-text-fill-color: transparent;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     }
 
@@ -57,8 +58,8 @@
       font-size: 1.5em;
       max-width: 700px;
       margin-bottom: 40px;
-      opacity: 0.9;
       color: white;
+      opacity: 0.9;
       line-height: 1.6;
       font-family: 'Roboto', sans-serif;
     }
@@ -131,51 +132,60 @@
     }
 
     footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
       text-align: center;
       color: #ccc;
       font-size: 14px;
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.5);
     }
 
-    section#products {
+    section#products, section#contact {
       position: relative;
       min-height: 100vh;
-      text-align: center;
+      padding: 60px 20px;
       z-index: 0;
-      margin-bottom: 0; /* Ensure no extra margin below */
-      padding-top: 0; /* Fix any extra padding */
     }
 
-    section#products::before {
+    section#products::before,
+    section#contact::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background: url("pexels-junior-teixeira-1064069-2047905.jpg") no-repeat center center fixed;
-      background-size: cover;
       z-index: -2;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    section#products::before {
+      background-image: url("pexels-junior-teixeira-1064069-2047905.jpg");
+    }
+
+    section#contact::before {
+      background-image: url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg");
+    }
+
+    section#contact::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
     }
 
     .products-overlay {
-      position: relative;
       background-color: rgba(0, 0, 0, 0.4);
       padding: 60px 20px;
       border-radius: 15px;
       max-width: 1100px;
-      margin: 0 auto;
-      z-index: 1;
+      margin: auto;
       color: white;
-      margin-bottom: 0; /* Remove margin-bottom */
-    }
-
-    section#products h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      font-weight: 600;
     }
 
     .product-cards {
@@ -187,13 +197,13 @@
     }
 
     .product-card {
-      background: #f9f9f9;
+      background: #fff;
       border-radius: 15px;
       padding: 20px;
       width: 220px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
       transition: 0.3s;
-      color: black;
+      color: #000;
     }
 
     .product-card:hover {
@@ -238,61 +248,26 @@
       transform: translateY(-3px);
     }
 
-    section#contact {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
-      text-align: center;
-      min-height: 100vh;
-      z-index: 0;
-      margin-top: 0; /* Ensure no margin-top */
-      padding-top: 0; /* Remove any extra padding */
-    }
-
-    section#contact::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: url("priscilla-du-preez-DZcHCzUhtMo-unsplash.jpg") no-repeat center center fixed;
-      background-size: cover;
-      z-index: -2;
-    }
-
-    section#contact::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      z-index: -1;
-    }
-
-    section#contact h2 {
+    section#contact h2,
+    section#products h2 {
       font-size: 2.5em;
       margin-bottom: 20px;
-      color: white;
+      font-weight: 600;
     }
 
     section#contact p {
       font-size: 1.2em;
       color: #fff;
+      margin-bottom: 10px;
     }
 
     section#contact a {
-      color: #fff;
+      color: #1abc9c;
       text-decoration: none;
     }
 
     section#contact a:hover {
-      color: #1abc9c;
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -306,56 +281,56 @@
       }
 
       .product-card {
-        width: 200px;
+        width: 100%;
+        max-width: 320px;
       }
 
-      section#products h2 {
-        font-size: 2em;
+      .products-overlay, .overlay {
+        padding: 40px 15px;
       }
     }
   </style>
 </head>
 <body>
 
-<!-- Floating Buttons -->
-<div class="overlay">
+<header class="overlay" role="banner">
   <div class="bubbles">
-    <a href="#search" class="bubble-btn">🔍 Search</a>
+    <a href="#search" class="bubble-btn" aria-label="Search">🔍 Search</a>
   </div>
-  <a href="#contact" class="contact-bubble">📞</a>
+  <a href="#contact" class="contact-bubble" aria-label="Contact Us">📞</a>
 
   <h1>Buyit Lk</h1>
   <p>Discover the best deals on trendy gadgets & accessories. Fast delivery and cash on delivery across Sri Lanka 🇱🇰</p>
-  <a href="#products" class="cta-btn">🛍️ Explore Products</a>
-</div>
+  <a href="#products" class="cta-btn" role="button">🛍️ Explore Products</a>
+</header>
 
-<!-- Products Section -->
-<section id="products">
-  <div class="products-overlay">
-    <h2>🛍️ Featured Products</h2>
-    <div class="product-cards">
-      <div class="product-card">
-        <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" />
-        <h3>InPods 13</h3>
-        <p>High-quality audio, compact design, Bluetooth 5.0</p>
-        <strong>Rs. 1550</strong>
-        <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013">Order Now</a>
+<main>
+  <section id="products" aria-labelledby="products-heading">
+    <div class="products-overlay">
+      <h2 id="products-heading">🛍️ Featured Products</h2>
+      <div class="product-cards">
+        <article class="product-card">
+          <img src="51IkEO3fepL._AC_SX679_.jpg" alt="InPods 13" loading="lazy" />
+          <h3>InPods 13</h3>
+          <p>High-quality audio, compact design, Bluetooth 5.0</p>
+          <strong>Rs. 1550</strong>
+          <a href="https://wa.me/94788405736?text=I'm%20interested%20in%20InPods%2013" target="_blank" rel="noopener noreferrer">Order Now</a>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section id="contact">
-  <h2>📞 Contact Us</h2>
-  <p>If you have any questions or need assistance, feel free to reach out!</p>
-  <p><strong>Phone:</strong> <a href="tel:+94788405736">+94 788 405 736</a></p>
-  <p><strong>Email:</strong> <a href="mailto:info@buyitlk.com">info@buyitlk.com</a></p>
-  <p><strong>WhatsApp:</strong> <a href="https://wa.me/94788405736" target="_blank">Chat with us</a></p>
-</section>
+  <section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">📞 Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to reach out!</p>
+    <p><strong>Phone:</strong> <a href="tel:+94788405736">+94 788 405 736</a></p>
+    <p><strong>Email:</strong> <a href="mailto:info@buyitlk.com">info@buyitlk.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/94788405736" target="_blank">Chat with us</a></p>
+  </section>
+</main>
 
-<footer>
-  &copy; 2025 Buyit Lk. Designed with Keshara Hishad in Sri Lanka.
+<footer role="contentinfo">
+  &copy; 2025 Buyit Lk. Designed by Keshara Hishad
 </footer>
 
 </body>
