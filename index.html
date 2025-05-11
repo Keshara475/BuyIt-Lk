@@ -148,7 +148,8 @@
       font-size: 14px;
     }
 
-    section#products {
+    section#products,
+    section#search {
       position: relative;
       min-height: 100vh;
       text-align: center;
@@ -157,7 +158,8 @@
       padding-top: 0;
     }
 
-    section#products::before {
+    section#products::before,
+    section#search::before {
       content: "";
       position: absolute;
       top: 0;
@@ -178,7 +180,8 @@
       color: white;
     }
 
-    section#products h2 {
+    section#products h2,
+    section#search h2 {
       font-size: 2.5em;
       margin-bottom: 20px;
       font-weight: 600;
@@ -245,6 +248,48 @@
       transform: translateY(-3px);
     }
 
+    .search-container {
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .search-container ul {
+      position: absolute;
+      width: 100%;
+      background: white;
+      color: black;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 200px;
+      overflow-y: auto;
+      border-radius: 10px;
+      margin-top: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: none;
+      z-index: 5;
+    }
+
+    .search-container ul li {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .search-container ul li:hover {
+      background-color: #f0f0f0;
+    }
+
     section#contact {
       position: relative;
       display: flex;
@@ -255,8 +300,6 @@
       text-align: center;
       min-height: 100vh;
       z-index: 0;
-      margin-top: 0;
-      padding-top: 0;
     }
 
     section#contact::before {
@@ -336,6 +379,17 @@
   <a href="#products" class="cta-btn">🛍️ Explore Products</a>
 </div>
 
+<!-- Search Section -->
+<section id="search">
+  <div class="products-overlay">
+    <h2>🔍 Search Products</h2>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search items..." />
+      <ul id="resultsList"></ul>
+    </div>
+  </div>
+</section>
+
 <!-- Products Section -->
 <section id="products">
   <div class="products-overlay">
@@ -364,6 +418,37 @@
 <footer>
   &copy; 2025 Buyit Lk. Designed with Keshara Hishad in Sri Lanka.
 </footer>
+
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const resultsList = document.getElementById('resultsList');
+
+  const items = [
+    'InPods 13',
+    'Wireless Earbuds',
+    'Smartwatch X2',
+    'Phone Holder',
+    'Bluetooth Speaker',
+    'USB-C Cable',
+    'LED Ring Light'
+  ];
+
+  searchInput.addEventListener('focus', () => {
+    resultsList.style.display = 'block';
+  });
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    const filtered = items.filter(item => item.toLowerCase().includes(query));
+    resultsList.innerHTML = filtered.map(item => `<li>${item}</li>`).join('');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-container')) {
+      resultsList.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
